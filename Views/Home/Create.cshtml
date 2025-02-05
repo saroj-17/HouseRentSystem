@@ -1,0 +1,54 @@
+@model Rent
+
+<h2>Add Rent Records </h2>
+<form asp-action="Create">
+    <label for="Month">Month</label>
+    <select asp-for="Month" class="form-control">
+        <option value="Baisakh"> Baisakh</option>
+        <option value="Jestha">Jestha</option>
+        <option value="Ashadh">Ashadh</option>
+        <option value="Shrawan">Shrawan</option>
+        <option value="Bhadra">Bhadra</option>
+        <option value="Ashwin">Ashwin</option>
+        <option value="Kartik">Kartik</option>
+        <option value="Mangsir">Mangsir</option>
+        <option value="Poush">Poush</option>
+        <option value="Magh">Magh</option>
+        <option value="Falgun">Falgun</option>
+        <option value="Chaitra">Chaitra</option>
+    </select>
+
+    <label for="Name">Name</label>
+    <input type="text" asp-for="Name" class="form-control">
+
+    <label>Previous Unit:</label>
+    <input type="number" asp-for="PreviousUnit" class="form-control" />
+
+      <label>New Unit:</label>
+    <input type="number" asp-for="NewUnit" class="form-control" />
+    
+    <label>Electricity Price (Per Unit):</label>
+    <input type="number" step="0.01" asp-for="ElectrictyPrice" class="form-control" />
+    
+    <label>House Rent:</label>
+    <input type="number" step="0.01" asp-for="HouseRent" class="form-control" />
+    
+    <label>Water :</label>
+    <input type="number" step="0.01" asp-for="WaterPrice" class="form-control" />
+
+     
+    <label>Water :</label>
+    <input type="number" step="0.01" asp-for="WastePrice" class="form-control" />
+    
+    <label>Status:</label>
+    <select asp-for="Status" class="form-control">
+        <option>Paid</option>
+        <option>Pending</option>
+    </select>
+
+    <label>Rent Date:</label>
+    <input type="date" asp-for="RentDate" class="form-control" />
+
+    <button type="submit" class="btn btn-success mt-2">Save</button>
+
+</form>
