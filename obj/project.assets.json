@@ -2017,11 +2017,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/saroj/Desktop/house-rent/HouseRent/HouseRent.csproj",
+      "projectUniqueName": "/home/saroj/Desktop/house-rent/HouseRentSystem/HouseRent.csproj",
       "projectName": "HouseRent",
-      "projectPath": "/home/saroj/Desktop/house-rent/HouseRent/HouseRent.csproj",
+      "projectPath": "/home/saroj/Desktop/house-rent/HouseRentSystem/HouseRent.csproj",
       "packagesPath": "/home/saroj/.nuget/packages/",
-      "outputPath": "/home/saroj/Desktop/house-rent/HouseRent/obj/",
+      "outputPath": "/home/saroj/Desktop/house-rent/HouseRentSystem/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/saroj/.nuget/NuGet/NuGet.Config"
