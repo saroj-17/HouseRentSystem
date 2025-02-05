@@ -2,7 +2,43 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>House Rent Records</h2>
+<a asp-action="Create" class="btb btn-primary">Add New Rent</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Month</th>
+            <th>Name</th>
+            <th>Electricty(Units)</th>
+            <th>House Rent</th>
+            <th>Water</th>
+            <th>Waste</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Rent Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rent in Model)
+        {
+            <tr>
+                <td>@rent.Month</td>
+                <td>@rent.Name</td>
+                <td>@rent.PreviousUnit → @rent.NewUnit</td>
+                <td>@rent.Water</td>
+                <td>@rent.Waste</td>
+                <td>@rent.Discount</td>
+                <td>@rent.Total</td>
+                <td>@rent.Status</td>
+                <td>@rent.RentDate.ToShortDateString()</td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@rent.Id" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@rent.Id" class="btb btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
